@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    platform: oracle
+    url: jdbc:oracle:thin:@localhost:1521:XE
+    username: regiocom
+    password: rEGiocom123
+    initialization-mode: never
+  jpa:
+    #show-sql: true
+    properties:
+      hibernate:
+     #   format_sql: true
+        dialect: org.hibernate.dialect.Oracle10gDialect
+    hibernate:
+      ddl-auto: create
+  liquibase:
+    enabled: false

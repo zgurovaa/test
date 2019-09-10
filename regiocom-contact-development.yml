@@ -1,0 +1,21 @@
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+#        format_sql: true
+    hibernate:
+      ddl-auto: create
+  liquibase:
+    enabled: false
+  data:
+    elasticsearch:
+      cluster-nodes: localhost:9300
+      cluster-name: elasticsearch
+      repositories:
+        enabled: true
+logging:
+  level:
+    org.hsqldb.jdbcDriver: TRACE
+    org.springframework.data.elasticsearch: TRACE
+    elasticsearch.index.search.slowlog.query: TRACE
